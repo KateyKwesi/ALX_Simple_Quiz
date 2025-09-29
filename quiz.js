@@ -4,9 +4,11 @@ function checkAnswer() {
   let userAnswer = checkedRadio.value;
   let para = document.getElementById(`feedback`);
 
-  userAnswer === correctAnswer
-    ? (para.textContent = `Correct! Well done.`)
-    : (para.textContent = `That's incorrect. Try again!`);
+  if (userAnswer === correctAnswer) {
+    para.textContent = "Correct! Well done.";
+  } else {
+    para.textContent = "That's incorrect. Try again!";
+  }
 }
 
 const submit = document.getElementById(`submit-answer`);
